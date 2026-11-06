@@ -33,9 +33,29 @@
 // const titulo = document.getElementById('titulo'); //Accedemos
 // titulo.innerText = 'Mis toppings favoritos'; //Modificamos
 
+//Para mpdificar Atributos, en este ejemplo un enlace HREF
+// const enlaces = document.getElementsByTagName('a');
+// console.log(enlaces[0].getAttribute('href')); //Para acceder al atributo
+// console.log(enlaces[0].removeAttribute('href'));//Para eliminar el atributo
+// console.log(enlaces[0].setAttribute('href', 'www.google.com'));//Para modificar el atributo..primer elemento es el atributo seleccionado y segundo el valor que le vamos a colocar
+
+//Para agregar o modificar clases
+// const primerTopping = document.querySelector('.topping');
+// primerTopping.classList.add('texto-verde'); //AGREGA una clase
+// console.log(primerTopping.classList.contains('fondo-marron'));//Verifica //Devuelve TRUE or FALSE
+// primerTopping.classList.remove('topping');//Elimina una clase
+// console.log(primerTopping.classList); //Muestra la lista de clases que hay en el dom y sus valores
 
 
+//Para Crear un elemendo desde cero al DOM
+const listaDeToppings = document.getElementById('lista-toppings');//Ubicar donde colocar el elem nuevo
+const toppingNuevo = document.createElement('li');//Creamos el elemento sin agregarlo
+toppingNuevo.classList.add('topping', 'fondo-marron');//PAra dar estilo al elemento nuevo agregado
+toppingNuevo.innerText = 'Queso Extra';
+listaDeToppings.append(toppingNuevo);//Agregar topping nuevo a la lista de topping
 
+//Para ELIMINAR un elemendo desde cero al DOM
+toppingNuevo.remove();
 
 
 
@@ -65,4 +85,13 @@ NOTAS:
 
 -Para dar estilos desde JS usamos notacion de puntos => 
     toppingPrimeroCambioEstilo.style.backgroundColor = 'blue'; 
+
+    CLASESnotas
+-Para añadir una clase usamos .add('valor...')
+-Para verificar si existe una clase usamos el metodo .contains('valor...') -DEVUELVE TRUE O FALSE-
+-Para eliminar una clase usamos .remove('valor...')
+
+-Para crear un elemento nuevo usamos el metodo createElement('etiqueta...')
+
+-Para agregar un nodo dentro de otro elemento usamos .appendo('elementoNuevo...')
 */

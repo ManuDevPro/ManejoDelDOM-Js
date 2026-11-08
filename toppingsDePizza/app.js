@@ -48,14 +48,38 @@
 
 
 //Para Crear un elemendo desde cero al DOM
-const listaDeToppings = document.getElementById('lista-toppings');//Ubicar donde colocar el elem nuevo
-const toppingNuevo = document.createElement('li');//Creamos el elemento sin agregarlo
-toppingNuevo.classList.add('topping', 'fondo-marron');//PAra dar estilo al elemento nuevo agregado
-toppingNuevo.innerText = 'Queso Extra';
-listaDeToppings.append(toppingNuevo);//Agregar topping nuevo a la lista de topping
+// const listaDeToppings = document.getElementById('lista-toppings');//Ubicar donde colocar el elem nuevo
+// const toppingNuevo = document.createElement('li');//Creamos el elemento sin agregarlo
+// toppingNuevo.classList.add('topping', 'fondo-marron');//PAra dar estilo al elemento nuevo agregado
+// toppingNuevo.innerText = 'Queso Extra';
+// listaDeToppings.append(toppingNuevo);//Agregar topping nuevo a la lista de topping
+// listaDeToppings.appendChild(toppingNuevo);
 
 //Para ELIMINAR un elemendo desde cero al DOM
-toppingNuevo.remove();
+// toppingNuevo.remove();
+
+//Para recorrer el DOM
+// const listaDeToppings = document.getElementById('lista-toppings');
+// console.log(listaDeToppings.parentElement);//muestra el elemento HTML padre
+// console.log(listaDeToppings.parentNode); //Muestra todas las caracteristicas
+// console.log(listaDeToppings.children); //Muestra los hijos del elemento
+//                    HIJOS
+// console.log(listaDeToppings.firstChild); //Selecciona el primer hijo #text....
+// console.log(listaDeToppings.firstElementChild) //Selecciona el primer hijo version HTML (Recomendado PRIMERO)
+// console.log(listaDeToppings.lastChild); //Selecciona el ultimo hijo #text....
+// console.log(listaDeToppings.lastElementChild); //Selecciona el ULTIMO elemento hijo version HTML (Recomendad ULTIMO)
+// console.log(listaDeToppings.children[0]); //Selecciona el hijo segun el indice
+//                    HERMANOS
+// console.log(listaDeToppings.previousElementSibling); //Muestra elemento HERMANO anterior (RECOMENDADO)
+// console.log(listaDeToppings.previousSibling) //Muestra nodo HERNANO anterior
+// console.log(listaDeToppings.nextElementSibling); //Muestra elemento HERMANO posterior (RECOMENDADO)
+// console.log(listaDeToppings.nextSibling); //Muestra nodo HERMANO posterior
+
+// Eventos Del DOM
+
+
+
+
 
 
 
@@ -93,5 +117,11 @@ NOTAS:
 
 -Para crear un elemento nuevo usamos el metodo createElement('etiqueta...')
 
--Para agregar un nodo dentro de otro elemento usamos .appendo('elementoNuevo...')
+-Para agregar un nodo dentro de otro elemento usamos .append('elementoNuevo...')
+-Para agregar elementos HTML usamos appendChild('elementoHTMLnuevo...')
+
+-Para eliminar un elemento usamos el metodo remove()
+
+nodo =>  incluye todo
+parentElement => solo incluye ek elemento HTML
 */

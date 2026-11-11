@@ -14,8 +14,14 @@
 // const primeroToppinNaranja = document.querySelector('.topping.fondo-naranja'); //Aqui buscamos un elemento con varias caracteristicas
 // const primerToppingNoMarron = document.querySelector('ul li:not(.fondo-marron)');//Muestra primer topping que no tiene fondo marron
 
-//Metodo querySelectorAll()  => Muestra todos los elementos que cumplan lo que pedimos y devuelve una LISTA DE NODOS
+//Metodo querySelectorAll()  => Muestra todos los elementos que cumplan lo que pedimos y devuelve una LISTA DE NODOS (Pero debemos recorrerlos con un array porque son varios)
 // const toppingNaranja = document.querySelectorAll('.topping.fondo-naranja');
+// const cambioMarron = document.querySelectorAll('.fondo-naranja'); //Primero seleccionamos
+//Aqui recorremos todos los seleccionados se aplique el cambio
+// cambioMarron.forEach(cambio => {
+//     cambio.style.color = 'red';
+//     cambio.style.backgroundColor = 'green';
+// });
 
 //Para dar ESTILOS desde JS usando la seleccion con los metodos anteriores
 // const toppingPrimeroCambioEstilo = document.querySelector('.topping');
@@ -111,7 +117,7 @@ NOTAS:
     toppingPrimeroCambioEstilo.style.backgroundColor = 'blue'; 
 
     CLASESnotas
--Para añadir una clase usamos .add('valor...')
+-Para agregar una clase usamos .add('valor...')
 -Para verificar si existe una clase usamos el metodo .contains('valor...') -DEVUELVE TRUE O FALSE-
 -Para eliminar una clase usamos .remove('valor...')
 
@@ -125,3 +131,22 @@ NOTAS:
 nodo =>  incluye todo
 parentElement => solo incluye ek elemento HTML
 */
+
+
+
+
+//---------------------------REPASOS------------------------------------------------------
+
+const cambioFondoNar = document.querySelectorAll('.fondo-naranja');
+cambioFondoNar.forEach(cambioNar => {
+    cambioNar.style.color = '#FFDDAA';
+    cambioNar.style.textTransform = 'lowerCase';
+    cambioNar.style.backgroundColor = 'blue';
+});
+
+const cambioFondoMarr = document.querySelectorAll('.fondo-marron');
+cambioFondoMarr.forEach(cambioMarr => {
+    cambioMarr.style.color = '#ffddaa';
+    cambioMarr.style.textTransform = 'uppercase';
+    cambioMarr.style.backgroundColor = 'green';
+});

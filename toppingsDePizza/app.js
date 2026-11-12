@@ -137,6 +137,7 @@ parentElement => solo incluye ek elemento HTML
 
 //---------------------------REPASOS------------------------------------------------------
 
+//           Trabajando solo los de fondo naranja
 const cambioFondoNar = document.querySelectorAll('.fondo-naranja');
 cambioFondoNar.forEach(cambioNar => {
     cambioNar.style.color = '#FFDDAA';
@@ -144,9 +145,25 @@ cambioFondoNar.forEach(cambioNar => {
     cambioNar.style.backgroundColor = 'blue';
 });
 
+//           Trabajando solo los de fondo marron
 const cambioFondoMarr = document.querySelectorAll('.fondo-marron');
 cambioFondoMarr.forEach(cambioMarr => {
     cambioMarr.style.color = '#ffddaa';
     cambioMarr.style.textTransform = 'uppercase';
     cambioMarr.style.backgroundColor = 'green';
 });
+
+//          Trabajando todos los toppings al mismo tiempo
+const cambioTodoTopping = document.querySelectorAll('.topping');
+cambioTodoTopping.forEach(cambioTodo => {
+    cambioTodo.style.backgroundColor = 'green';
+    cambioTodo.style.textTransform = 'uppercase';
+    cambioTodo.style.color = 'white';
+    cambioTodo.style.borderRadius = '80px';
+});
+
+//           Trabajando el titulo
+const cambioTitulo = document.getElementById('titulo');
+cambioTitulo.style.textTransform = 'uppercase';
+cambioTitulo.style.backgroundColor = 'orange';
+cambioTitulo.style.borderRadius = '20px';
